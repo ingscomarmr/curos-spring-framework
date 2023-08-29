@@ -1,13 +1,13 @@
 <!-- Esta es mi primera vista con thymeleaf en spring mvc -->
-<html>
+<html xmlns:th="http://thymeleaf.org"> <!-- con th se agrega el namespace -->
 	<head>
 		<meta charset="UTF-8" />
-		<title>
-			Hola Spring Framework!
+		<title th:text="${title}"> <!-- de esta forma se hace referencia a los atributos th:text -->
+			
 		</title>
 	</head>
 	<body>
-		<h1>
+		<h1 th:text="${title}">
 			¡HOLA SPRING FRAMEWORK!!!
 		</h1>
 	</body>
