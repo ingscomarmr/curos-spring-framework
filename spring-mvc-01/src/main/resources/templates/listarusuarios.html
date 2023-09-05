@@ -1,0 +1,15 @@
+<!-- Esta es mi primera vista con thymeleaf en spring mvc -->
+<html xmlns:th="http://thymeleaf.org"> <!-- con th se agrega el namespace -->
+	<head>
+		<meta charset="UTF-8" />
+		<title th:text="${titulo}"> <!-- de esta forma se hace referencia a los atributos th:text -->
+			
+		</title>
+	</head>
+	<body>
+		<h1 th:text="${title}"></h1><br/>
+		
+		<div th:if="${usuarios.size() == 0}"><b>No hay usuarios!!</b></div>
+				
+	</body>
+</html>

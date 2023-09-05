@@ -1,5 +1,8 @@
 package com.comr.cursos.spring.mvc.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,9 +26,26 @@ public class InicioController {
 		Usuario usuario = new Usuario();
 		usuario.setNombre("Omar");
 		usuario.setApellido("Munguia Rivera");
+		usuario.setEmail("micorre@correo.com");
 		model.addAttribute("usuario", usuario);
 		model.addAttribute("titulo", "Datos ".concat(usuario.getNombre())); //se agrega el atriburo
 		
 		return "perfil";
+	}
+	
+	
+	@RequestMapping("/listarusuarios") //por default es metodo Get
+	public String listarUsuarios(Model model) {
+		model.addAttribute("titulo", "LISTA USUARIOS"); //se agrega el atriburo
+		List<Usuario> lista = new ArrayList<>();
+		
+		Usuario usuario = new Usuario();
+		usuario.setNombre("Omar");
+		usuario.setApellido("Munguia Rivera");
+		usuario.setEmail("micorre@correo.com");
+		model.addAttribute("usuarios", lista);
+		
+		
+		return "listarusuarios";
 	}
 }

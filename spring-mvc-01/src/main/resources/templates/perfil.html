@@ -17,6 +17,10 @@
 			<tr>
 				<td>Apellido:</td><td th:text="${usuario.apellido}"></td>
 			</tr>
+			<tr>
+				<td th:if="${usuario.email}" th:text="${usuario.email}" colspan="2"></td>
+				<td th:if="${usuario.email == null}" th:text="'El usuario no tiene correo!!'" colspan="2"></td>				
+			</tr>
 		</table>
 		<h1 th:text="${title}">
 		</h1>
