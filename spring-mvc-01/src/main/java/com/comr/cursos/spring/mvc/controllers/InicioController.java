@@ -36,13 +36,21 @@ public class InicioController {
 	
 	@RequestMapping("/listarusuarios") //por default es metodo Get
 	public String listarUsuarios(Model model) {
-		model.addAttribute("titulo", "LISTA USUARIOS"); //se agrega el atriburo
+		
+		
 		List<Usuario> lista = new ArrayList<>();
+		lista.add(new Usuario("Eder", "Neri", "Eder@correo.com"));
+		lista.add(new Usuario("Jon", "Sepa", "Jon.com"));
+		lista.add(new Usuario("Richi", "Richon", "Richi@correo.com"));
 		
 		Usuario usuario = new Usuario();
 		usuario.setNombre("Omar");
 		usuario.setApellido("Munguia Rivera");
 		usuario.setEmail("micorre@correo.com");
+		lista.add(usuario);
+		
+		//atributos
+		model.addAttribute("titulo", "LISTA USUARIOS"); //se agrega el atriburo
 		model.addAttribute("usuarios", lista);
 		
 		
