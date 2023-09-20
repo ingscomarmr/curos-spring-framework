@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"> <!-- con th se agrega el namespace -->
+<head>
+	<meta charset="UTF-8" />
+	<title>Recibe parametros String View</title>
+</head>
+<body>
+	<h1>HOME</h1>
+	<br/>
+	<ul>
+		<li>
+			<a th:href="@{/params/string(str='Hola Omar')}">Saluda a Omar</a>		
+		</li>
+		<li>
+			<a th:href="@{/params/string(str='Hola Sara Nikole')}">Saluda a Sara</a>		
+		</li>
+		<li>
+			<a th:href="@{/params/string(str='Hola Luis Pablo')}">Saluda a Pablo</a>		
+		</li>
+	</ul>
+	
+</body>
+</html>
